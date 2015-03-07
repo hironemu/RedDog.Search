@@ -63,6 +63,8 @@ namespace RedDog.Search
                 request.AddQueryParameter("scoringProfile", query.ScoringProfile);
             if (query.ScoringParameters != null && query.ScoringParameters.Any())
                 request.AddQueryParameter("scoringParameter", query.ScoringParameters);
+            if (!String.IsNullOrEmpty(query.MoreLikeThis))
+                request.AddQueryParameter("moreLikeThis", query.MoreLikeThis);
 
             return _connection.Execute<SearchQueryResult>(request.WithUriParameter(indexName), cancellationToken);
         }

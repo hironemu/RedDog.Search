@@ -118,5 +118,12 @@ namespace RedDog.Search.Model
             get;
             set;
         }
+
+        [JsonProperty("moreLikeThis")]
+        public string MoreLikeThis
+        {
+            get;
+            set;
+        }
     }
 }

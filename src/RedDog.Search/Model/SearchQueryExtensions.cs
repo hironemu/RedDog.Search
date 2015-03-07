@@ -111,5 +111,11 @@ namespace RedDog.Search.Model
             query.ScoringParameters = query.ScoringParameters.Concat(new[] { scoringParameter });
             return query;
         }
+
+        public static SearchQuery MoreLikeThis(this SearchQuery query, string moreLikeThis)
+        {
+            query.MoreLikeThis = moreLikeThis;
+            return query;
+        }
     }
 }
