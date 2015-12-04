@@ -125,5 +125,12 @@ namespace RedDog.Search.Model
             get;
             set;
         }
+
+        [JsonProperty("queryType")]
+        public string QueryType
+        {
+            get;
+            set;
+        }
     }
 }

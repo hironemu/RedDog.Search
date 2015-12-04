@@ -65,7 +65,8 @@ namespace RedDog.Search
                 request.AddQueryParameter("scoringParameter", query.ScoringParameters);
             if (!String.IsNullOrEmpty(query.MoreLikeThis))
                 request.AddQueryParameter("moreLikeThis", query.MoreLikeThis);
-
+            if (!String.IsNullOrEmpty(query.QueryType))
+                request.AddQueryParameter("queryType", query.QueryType);
             return _connection.Execute<SearchQueryResult>(request.WithUriParameter(indexName), cancellationToken);
         }
 

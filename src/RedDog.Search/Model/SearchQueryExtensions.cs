@@ -117,5 +117,11 @@ namespace RedDog.Search.Model
             query.MoreLikeThis = moreLikeThis;
             return query;
         }
+
+        public static SearchQuery QueryType(this SearchQuery query, string queryType)
+        {
+            query.QueryType = queryType;
+            return query;
+        }
     }
 }
